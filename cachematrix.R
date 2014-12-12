@@ -1,10 +1,21 @@
-## Put comments here that give an overall description of what your
-## functions do
+## R Programming - Project Assignment 2
+##
+## Luís Cunha
+## 
+## Write a short comment describing this functionhy
 
-## Write a short comment describing this functionhyhhh
-
-makeCacheMatrix <- function(x = matrix()) {
-
+makeCacheMatrix <- function(matrixEnvironment0 = matrix()) {
+        inverseEnvironment0 <- NULL
+        
+        setMatrix <- function (matrixToSet) { ## It will load the matrix to other environment
+                matrixEnvironment1 <<- matrixToSet
+                inverseEnvironment1 <<- NULL
+                
+        }
+        
+        getMatrix <- function() matrixEnvironment1 ## It will get the matrix if it exists from the other environment
+        
+        setInverse <- function (inverse)
 }
 
 
