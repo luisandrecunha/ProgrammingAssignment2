@@ -7,7 +7,7 @@
 makeCacheMatrix <- function(matrixEnvironment0 = matrix()) {
         inverseEnvironment0 <- NULL
         
-        setMatrix <- function (matrixToSet) { ## It will load the matrix to other environment
+        setMatrix <- function(matrixToSet) { ## It will load the matrix to other environment
                 matrixEnvironment1 <<- matrixToSet
                 inverseEnvironment1 <<- NULL
                 
@@ -15,7 +15,16 @@ makeCacheMatrix <- function(matrixEnvironment0 = matrix()) {
         
         getMatrix <- function() matrixEnvironment1 ## It will get the matrix if it exists from the other environment
         
-        setInverse <- function (inverse)
+        setInverse <- function(solve) inverseEnvironment1 << solve
+        
+        getInverse <- function() inverserEnvironment1
+        
+        list (
+                setMatrix = setMatrix,
+                getMatrix = getMatrix,
+                setInverse = setInverse,
+                getInverse = getInverse
+                )
 }
 
 
